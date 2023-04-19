@@ -7,3 +7,6 @@ pin '@hotwired/stimulus-loading', to: 'stimulus-loading.js', preload: true
 pin_all_from 'app/javascript/controllers', under: 'controllers'
 pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
+pin "lodash", to: "https://ga.jspm.io/npm:lodash@4.17.21/lodash.js"
+pin "flowbite", to: "https://ga.jspm.io/npm:flowbite@1.6.5/lib/esm/index.js"
+
