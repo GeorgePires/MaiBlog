@@ -1,17 +1,18 @@
-<div id="<%= dom_id post %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= post.title %>
-  </p>
+<div id="<%= dom_id post %>" class="my-10 bg-gray-100 p-4 md:p-6 rounded-xl shadow-md">
+  <div class="flex justify-between items-center">
+    <span class="font-semibold text-gray-600 text-sm">
+      <%= post.created_at.strftime("%d %B, %Y") %> - <%= post.user.full_name %></span>
+      <span class="px-3 py-1 bg-gray-600 text-white text-sm font-bold rounded">blog</span>
+  </div>
+  <div class="mt-2">
+    <a href="#" class="text-xl md:text-2xl text-gray-700 font-bold hover:text-gray-600"><%= post.title %></a>
+    <p class="mt-2 text-base lg:text-lg text-gray-700"><%= post.body %></p>
+  </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Body:</strong>
-    <%= post.body %>
-  </p>
-
-  <% if action_name != "show" %>
+  <% if current_user == post.user %>
     <%= link_to "Show this post", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Edit this post', edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
+  <% else %>
+    <div class=" mt-4"><a href="/how-to-create-a-amazing-blog" class="text-primary font-semibold hover:underline">Read more</a></div>
   <% end %>
 </div>
