@@ -6,4 +6,11 @@ const application = Application.start()
 application.debug = false
 window.Stimulus   = application
 
+// Import and register all TailwindCSS Components
+import { Alert, Dropdown, Toggle} from "tailwindcss-stimulus-components"
+
+application.register('alert', Alert)
+application.register('dropdown', Dropdown)
+application.register('toggle', Toggle)
+
 export { application }
