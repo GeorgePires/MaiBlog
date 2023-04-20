@@ -9,5 +9,5 @@ pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
 pin "lodash", to: "https://ga.jspm.io/npm:lodash@4.17.21/lodash.js"
 pin "flowbite", to: "https://ga.jspm.io/npm:flowbite@1.6.5/lib/esm/index.js"
-
 pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.7/lib/index.js"
+pin "tailwindcss-stimulus-components" # @3.0.4
