@@ -14,9 +14,10 @@
   <body>
     <%= render  "layouts/components/header" %>
     <main class="container mx-auto mt-28 px-5 flex">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <%= render 'layouts/components/alerts' %>
+        <%= yield %>
+      </div>
     </main>
     <%= render  "layouts/components/footer" %>
   </body>
