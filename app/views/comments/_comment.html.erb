@@ -1,0 +1,14 @@
+<div id="<%= dom_id comment %>">
+  <label for="message" class="block font-medium text-gray-900 dark:text-white">
+  <%= comment.user.present? ? comment.user.full_name : 'teste' %></label>
+  <span class="text-sm text-gray-500 mb-3">Posted <%= time_ago_in_words(comment.created_at) %></span>
+  <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50">
+    <textarea id="message" rows="3" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" disabled ><%= comment.body %></textarea>
+
+    <% if current_user.present? && current_user == comment.user %>
+      <div class="flex items-center justify-between px-3 py-2 border-t">
+        <%= button_to "Delete", [post, comment], class:"inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-red-700 rounded-lg focus:ring-4 focus:ring-red-200 hover:bg-red-800", method: :delete %>
+      </div>
+    <% end %>
+  </div>
+</div>
