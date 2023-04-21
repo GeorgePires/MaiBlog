@@ -56,6 +56,9 @@ gem 'image_processing', '~> 1.2'
 # gem 'Devise'
 gem 'devise'
 
+# gem 'kaminari'
+gem 'kaminari'
+
 # Setup
 gem 'faker'
 gem 'htmlbeautifier'
