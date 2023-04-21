@@ -11,14 +11,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="h-full">
     <%= render  "layouts/components/header" %>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <%= render 'layouts/components/alerts' %>
-        <%= yield %>
-      </div>
-    </main>
+    <div class="container px-6 mx-auto grid mt-28">
+      <%= render 'layouts/components/alerts' %>
+      <%= yield %>
+    </div>
     <%= render  "layouts/components/footer" %>
   </body>
 </html>
