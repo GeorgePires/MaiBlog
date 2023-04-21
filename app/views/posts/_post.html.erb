@@ -9,10 +9,11 @@
     <p class="mt-2 text-base lg:text-lg text-gray-700"><%= post.body %></p>
   </div>
 
-  <% if current_user == post.user %>
+  <% if action_name != "show" && current_user == post.user %>
     <%= link_to "Show this post", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Edit this post', edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+  <% elsif action_name == "show"  %>
   <% else %>
-    <div class=" mt-4"><a href="/how-to-create-a-amazing-blog" class="text-primary font-semibold hover:underline">Read more</a></div>
+    <%= link_to "Read more", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium hover:underline" %>
   <% end %>
 </div>
