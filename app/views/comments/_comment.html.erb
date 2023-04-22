@@ -1,9 +1,9 @@
 <div id="<%= dom_id comment %>">
   <label for="message" class="block font-medium text-gray-900 dark:text-white">
-  <%= comment.user.present? ? comment.user.full_name : 'teste' %></label>
+  <%= comment.user.present? ? comment.user.full_name : 'Anonymous' %></label>
   <span class="text-sm text-gray-500 mb-3">Posted <%= time_ago_in_words(comment.created_at) %></span>
   <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50">
-    <textarea id="message" rows="3" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" disabled ><%= comment.body %></textarea>
+    <textarea id="message" rows="2" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" disabled ><%= comment.body %></textarea>
 
     <% if current_user.present? && current_user == comment.user %>
       <div class="flex items-center justify-between px-3 py-2 border-t">
