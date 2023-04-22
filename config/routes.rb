@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'home/about'
+  get 'about', to: 'home#about'
   devise_for :users
   
   resources :posts do
