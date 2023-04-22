@@ -1,0 +1,9 @@
+<%# FORM TAGS %>
+<div class="nested-form-wrapper" data-new-record="<%= tag_form.object.new_record? %>">
+  <%= tag_form.hidden_field :id %>
+  <%= tag_form.label :tags %>
+  <%= tag_form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", placeholder: "Ruby" %>
+  
+  <button type="button" data-action="nested-form#remove">Remove</button>
+  <%= tag_form.hidden_field :_destroy %>
+</div>

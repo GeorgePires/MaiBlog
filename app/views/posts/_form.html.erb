@@ -1,4 +1,5 @@
-<%= form_with(model: post, class: "contents") do |form| %>
+<%= form_with(model: post, data: { controller: 'nested-form', nested_form_wrapper_selector_value: '.nested-form-wrapper' },
+             class: "contents") do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -15,6 +16,21 @@
     <%= form.label :title %>
     <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
+
+  <template data-nested-form-target="template">
+    <%= form.fields_for :tags, Tag.new, child_index: 'NEW_RECORD' do |tag_form| %>
+      <div class="tags my-5">
+        <%= render  "tag_fields", tag_form: tag_form %>
+      </div>
+    <% end %>
+  </template>
+
+  <%= form.fields_for :tags do |tag_form| %>
+    <%= render "tag_fields", tag_form: tag_form %>
+  <% end %>
+
+  <div data-nested-form-target="target"></div>
+  <button type="button" data-action="nested-form#add" class="text-xs rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer">Add Tags</button>
 
   <div class="my-5">
     <%= form.label :body %>
