@@ -16,6 +16,6 @@
     <%= link_to 'Edit this post', edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
   <% elsif action_name == "show"  %>
   <% else %>
-    <%= link_to "Read more", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium hover:underline" %>
+    <%= link_to "Read more", post, class: "rounded-lg py-3 px-5 font-medium hover:underline block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" %>
   <% end %>
 </div>
