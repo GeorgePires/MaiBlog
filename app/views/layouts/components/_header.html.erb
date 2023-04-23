@@ -13,6 +13,12 @@
           <div data-dropdown-target="menu" class="absolute hidden bg-white rounded-lg shadow w-44" >
             <ul class="py-2 text-sm text-gray-700">
               <li>
+                <%= link_to("My Posts", posts_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
+              </li>
+              <li>
+                <%= link_to("Edit Account", edit_user_registration_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
+              </li>
+              <li>
                 <%= button_to("Logout", destroy_user_session_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
               </li>
             </ul>
