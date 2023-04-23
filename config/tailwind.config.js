@@ -20,7 +20,9 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
+    require('flowbite-typography'),
     require('@tailwindcss/container-queries'),
+    require("daisyui"),
     require('flowbite/plugin')
   ]
 }

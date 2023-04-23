@@ -3,5 +3,9 @@
     "daisyui": "^2.51.5",
     "flowbite": "^1.6.5",
     "tailwindcss-stimulus-components": "^3.0.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "flowbite-typography": "^1.0.3"
   }
 }
