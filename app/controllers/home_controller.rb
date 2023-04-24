@@ -4,7 +4,8 @@ class HomeController < ApplicationController
   layout 'home'
 
   def index
-    @posts = Post.includes(:user, :rich_text_body).order(created_at: :desc).page(params[:page])
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.includes(:user, :rich_text_body).desc_order.page(params[:page])
   end
 
   def about; end

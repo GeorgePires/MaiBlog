@@ -59,6 +59,9 @@ gem 'devise'
 # gem 'kaminari'
 gem 'kaminari'
 
+# gem 'ransack'
+gem 'ransack', '~> 3.2', '>= 3.2.1'
+
 # Setup
 gem 'faker'
 gem 'htmlbeautifier'
@@ -89,4 +92,4 @@ group :test do
   gem 'webdrivers'
 end
 
-gem "dockerfile-rails", ">= 1.2", :group => :development
+gem 'dockerfile-rails', '>= 1.2', group: :development
