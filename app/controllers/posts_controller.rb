@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
-    @comments = @post.comments.order(created_at: :desc)
+    @comments = @post.comments.desc_order
   end
 
   # GET /posts/new
@@ -71,6 +71,6 @@ class PostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:title, :body, tags_attributes: [:id, :name, :_destroy])
+    params.require(:post).permit(:title, :body, tags_attributes: %i[id name _destroy])
   end
 end
