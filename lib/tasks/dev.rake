@@ -18,5 +18,6 @@ if Rails.env.development?
     spinner('Created database..') { `rails db:create` }
     spinner('Migrating..') { `rails db:migrate` }
     spinner('Create user and post..') { `rails db:seed` }
+    spinner('Precompile assets..') { `rails assets:precompile` }
   end
 end
