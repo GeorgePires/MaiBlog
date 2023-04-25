@@ -32,4 +32,10 @@
 en:
   home:
     index:
-      welcome: "We invest in the world’s potential"
+      title: "Welcome to MaiBlog!"
+      subtitle: "My goal is to share articles that can contribute to your personal and professional development and inspire new ideas."
+    header:
+      home: "Home"
+      about: "About"
+      sign_up: "Create Account"
+      sign_in: "Sign in"
