@@ -93,3 +93,5 @@ group :test do
 end
 
 gem 'dockerfile-rails', '>= 1.2', group: :development
+
+gem 'letter_opener', group: :development
