@@ -1,0 +1,1 @@
+web: rake db:migrate && bin/rails server -p 3000 && bin/rails tailwindcss:watch
