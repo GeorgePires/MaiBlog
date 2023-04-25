@@ -34,8 +34,30 @@ en:
     index:
       title: "Welcome to MaiBlog!"
       subtitle: "My goal is to share articles that can contribute to your personal and professional development and inspire new ideas."
+      search: "Search Title, Description or Tags"
     header:
       home: "Home"
       about: "About"
       sign_up: "Create Account"
       sign_in: "Sign in"
+      new_post: "New Post"
+    menu:
+      my_post: "My Posts"
+      edit_account: "Edit Account"
+      logout: "logout"
+    post:
+      read_more: "Read more"
+    pagination:
+      next: Next Page
+      prev: Previous Page
+    buttons:
+      back: Back to home
+      destroy: Delete
+      edit: Edit
+      comment: Post comment
+  activerecord:
+    attributes:
+      post:
+        body: Body
+        title: Title
+        tags: Tags
