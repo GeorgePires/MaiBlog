@@ -2,11 +2,12 @@
   <div class="mx-auto">
     <%= render @post %>
     <% if current_user == @post.try(:user) %>
-      <%= link_to 'Edit this post', edit_post_path(@post), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= link_to t('home.buttons.edit'), edit_post_path(@post), class: " text-white mt-2 rounded-lg px-5 py-2.5 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300  inline-block font-medium" %>
       <div class="inline-block ml-2">
-        <%= button_to 'Destroy this post', post_path(@post), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+        <%= button_to t('home.buttons.destroy'), post_path(@post), method: :delete, class: " inline-flex items-center text-center rounded-lg px-5 py-2.5 bg-red-600 text-white inline-block font-medium cursor-pointer hover:bg-red-700 focus:ring-4"%>
       </div>
-      <%= link_to 'Back to home', root_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+      <%= link_to t('home.buttons.back'), root_path, class: "ml-2 rounded-lg px-5 py-2.5 bg-gray-200 inline-block font-medium" %>
     <% end %>
 
     <div class="p-2">

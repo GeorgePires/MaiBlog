@@ -7,19 +7,19 @@
     <div class="flex md:order-2">
       <%# User signed_in? %>
       <% if user_signed_in? %>
-        <%= link_to("New Post", new_post_path, class:"text-gray-800 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2") %>
+        <%= link_to(t('home.header.new_post'), new_post_path, class:"text-gray-800 bg-gray-200 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2") %>
         <div data-controller="dropdown" class="relative">
           <button type="button" data-action="click->dropdown#toggle click@window->dropdown#hide" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0"><%= current_user.full_name %></button>
           <div data-dropdown-target="menu" class="absolute hidden bg-white rounded-lg shadow w-44" >
             <ul class="py-2 text-sm text-gray-700">
               <li>
-                <%= link_to("My Posts", posts_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
+                <%= link_to(t('home.menu.my_post'), posts_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
               </li>
               <li>
-                <%= link_to("Edit Account", edit_user_registration_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
+                <%= link_to(t('home.menu.edit_account'), edit_user_registration_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
               </li>
               <li>
-                <%= button_to("Logout", destroy_user_session_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
+                <%= button_to(t('home.menu.logout'), destroy_user_session_path, data: {action: "dropdown#toggle"}, method: :delete, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100") %>
               </li>
             </ul>
           </div>
