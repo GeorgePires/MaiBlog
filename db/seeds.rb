@@ -1,18 +1,14 @@
 # Hi!, use the rails dev:setup command to create data.
 
-# Create Users
+# Create User
 PASSWORD = 123_456
+george = User.create!(first_name: "George", last_name: "Pires", email: "george@gmail.com", password: PASSWORD, password_confirmation: PASSWORD)
 
-wes = User.create!(first_name: "Wes", last_name: "Pires", email: "wes@gmail.com", password: PASSWORD, password_confirmation: PASSWORD)
+# Create post and tags
+body = <<-END
+<strong>Eum vero nisi ut quasi magnam est labore distinctio.</strong><br><p>Lorem ipsum dolor sit amet. Qui necessitatibus quiaIn tempore ea accusamus voluptatibus ea voluptas quasi aut laboriosam sapiente. Eos aperiam dicta et suscipit maximeut nihil et quisquam consectetur? </p><br><blockquote cite="https://www.loremipzum.com">Est quidem nostrum non magni iure sed nihil dicta et doloribus nostrum. </blockquote><pre><code>&lt;!-- Et incidunt quia. --&gt;<br>&lt;quasi&gt;Est minima eaque 33 dolor aliquam.&lt;/quasi&gt;<br>&lt;perferendis&gt;Quo consequatur temporibus eum delectus soluta non deserunt laudantium?&lt;/perferendis&gt;<br>&lt;minima&gt;Et dolores odit.&lt;/minima&gt;<br></code></pre><h2>Ea mollitia doloribus eos facilis libero. </h2><p>Est dolor excepturi <a href="https://www.loremipzum.com" target="_blank">At veniam ea dicta illo ut accusamus dolorem</a> sed sint pariatur. Qui alias delenitiEt minus est voluptas internos sit tenetur temporibus ea accusantium officia sit perspiciatis quidem. </p><strong><h3>Ea delectus omnis et dolor excepturi. </h3></strong><br><p>Et repudiandae accusamusEt debitis sed consequatur aliquam et dicta aperiam qui velit delectus hic officia beatae ut deleniti numquam. Qui totam quidem sed nihil fugaet numquam non nobis consequatur sit dicta temporibus. </p><ul><li>Sit omnis omnis est neque quae. </li><li>Ut numquam molestiae est error quam sed molestias nihil. </li><li>Vel voluptatum quia sed quia officia et laborum earum ut veritatis earum. </li></ul>
 
-# Create Deposit and Withdraw
-post_body = <<-END
-  Pokémon é uma franquia de jogos eletrônicos, desenhos animados, mangás e outros produtos de mídia que se tornou um fenômeno cultural desde sua criação em 1996 pela Nintendo. A franquia é centrada em criaturas fictícias conhecidas como Pokémon, que os jogadores podem capturar, treinar e usar para batalhar uns contra os outros.
-
-Os jogos Pokémon foram lançados originalmente para o console Game Boy, e desde então foram lançados em várias plataformas, incluindo Nintendo DS, Nintendo 3DS e Nintendo Switch. Cada jogo apresenta uma nova região para explorar, com novos Pokémon a serem descobertos e capturados.
-
-Além dos jogos, a franquia Pokémon também inclui uma série de animação de longa duração, filmes, mangás, jogos de cartas colecionáveis ​​e muitos outros produtos de mídia. A série de animação é particularmente popular e segue as aventuras do treinador de Pokémon Ash Ketchum e seus amigos enquanto eles viajam pelo mundo Pokémon, batalham outros treinadores e tentam se tornar os melhores treinadores de Pokémon.
 END
 
-wes_post =  Post.create!(title: "Case Seeds 02", body: post_body, user_id: wes.id) 
-Tag.create(name: "chatGPT", post_id: wes_post.id)
+post =  Post.create!(title: "My First Post", body: body, user_id: george.id) 
+Tag.create(name: "First", post_id: post.id)
