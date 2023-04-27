@@ -37,6 +37,7 @@ pt-BR:
   datetime:
     distance_in_words:
       less_than_x_minutes: "menos de um minuto"
+      about_x_hours: "cerca de %{count} horas"
       x_seconds:
         one: "1 segundo"
         other: "%{count} segundos"
