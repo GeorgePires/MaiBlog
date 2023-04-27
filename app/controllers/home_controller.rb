@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result.includes(:user, :rich_text_body).desc_order.page(params[:page])
+    @posts = @q.result(distinct: true).includes(:user, :rich_text_body).desc_order.page(params[:page])
   end
 
   def about; end
