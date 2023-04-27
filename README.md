@@ -42,6 +42,15 @@
 - [x] Alterar senha
 - [x] Excluir sua conta
 
+**CORREÇÕES**
+- [x] Add validate no comentário 
+- [ ] Refatorar Action mailer - Gmail
+- [ ] Completar i18n - Devise
+- [x] Add upload de img no ActionText/ActiveStorage - mini_magick
+- [ ] Add upload de img com AWS - Amazon
+- [x] Pesquisa do ransack duplicada - @q.result(distinct: true)
+- [ ] Add Testes
+
 ## ⚡ Instalando o Projeto
 
 ```bash
