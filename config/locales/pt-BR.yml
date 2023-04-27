@@ -16,6 +16,10 @@ pt-BR:
       logout: "Sair"
     post:
       read_more: "Ler mais"
+    comment:
+        posted: Postado
+        anonymous: Anônimo
+        body: Escreva um comentário...
     pagination:
       next: Próxima página
       prev: Página anterior
@@ -30,3 +34,43 @@ pt-BR:
         body: Conteúdo
         title: Título
         tags: Tags
+  datetime:
+    distance_in_words:
+      less_than_x_minutes: "menos de um minuto"
+      x_seconds:
+        one: "1 segundo"
+        other: "%{count} segundos"
+      x_minutes:
+        one: "1 minuto"
+        other: "%{count} minutos"
+      x_hours:
+        one: "1 hora"
+        other: "%{count} horas"
+      x_days:
+        one: "1 dia"
+        other: "%{count} dias"
+      x_months:
+        one: "1 mês"
+        other: "%{count} meses"
+      x_years:
+        one: "1 ano"
+        other: "%{count} anos"
+    distance_in_words_include_seconds:
+      one: "1 segundo atrás"
+      other: "%{count} segundos atrás"
+    distance_in_words_include_minutes:
+      one: "1 minuto atrás"
+      other: "%{count} minutos atrás"
+    distance_in_words_include_hours:
+      one: "1 hora atrás"
+      other: "%{count} horas atrás"
+    distance_in_words_include_days:
+      one: "1 dia atrás"
+      other: "%{count} dias atrás"
+    distance_in_words_include_months:
+      one: "1 mês atrás"
+      other: "%{count} meses atrás"
+    distance_in_words_include_years:
+      one: "1 ano atrás"
+      other: "%{count} anos atrás"
+      
