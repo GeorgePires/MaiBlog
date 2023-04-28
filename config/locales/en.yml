@@ -55,10 +55,23 @@ en:
       next: Next Page
       prev: Previous Page
     buttons:
-      back: Back to home
+      back: 
+        show: Back to home
+        edit: Back to posts
+      show: Show this post
       destroy: Delete
       edit: Edit
       comment: Post comment
+    edit:
+      title: "Editing %{model}"
+    message:
+      confirm_destroy: Are you sure?
+    create:
+      success: "%{model} was successfully created."
+    update:
+      success: "%{model} was successfully updated."
+    destroy:
+      success: "%{model} was successfully destroyed."
   activerecord:
     attributes:
       post:

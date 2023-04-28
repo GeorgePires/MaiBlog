@@ -24,11 +24,30 @@ pt-BR:
       next: Próxima página
       prev: Página anterior
     buttons:
-      back: Voltar
+      back: 
+        show: Voltar
+        edit: Voltar aos posts
+      show: Visualizar
       destroy: Excluir
       edit: Editar
       comment: Comentar
+    edit:
+      title: "Editando %{model}"
+    message:
+      confirm_destroy: Você tem certeza que deseja excluir?
+    create:
+      success: "%{model} foi criado(a) com sucesso."
+    update:
+      success: "%{model} foi alterado(a) com sucesso."
+    destroy:
+      success: "%{model} foi excluído(a) com sucesso."
   activerecord:
+    models:
+      comment:
+        one: Comentário
+      post:
+        one: Post
+        other: Posts
     attributes:
       post:
         body: Conteúdo
