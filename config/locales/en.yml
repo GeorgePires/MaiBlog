@@ -44,7 +44,7 @@ en:
     menu:
       my_post: "My Posts"
       edit_account: "Edit Account"
-      logout: "logout"
+      logout: "Logout"
     post:
       read_more: "Read more"
     comment:
