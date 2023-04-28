@@ -44,8 +44,8 @@
 
 **CORREÇÕES**
 - [x] Add validate no comentário 
-- [ ] Refatorar Action mailer - Gmail
-- [ ] Completar i18n - Devise
+- [X] Refatorar Action mailer - Gmail
+- [X] Completar i18n - Devise
 - [x] Add upload de img no ActionText/ActiveStorage - mini_magick
 - [ ] Add upload de img com AWS - Amazon
 - [x] Pesquisa do ransack duplicada - @q.result(distinct: true)

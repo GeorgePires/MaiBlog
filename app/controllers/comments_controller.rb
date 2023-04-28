@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to post_url(@post), notice: 'Comment was successfully created.' }
+        format.html { redirect_to post_url(@post), notice: t('home.create.success', model: Comment.model_name.human) }
       else
         format.html { redirect_to post_path(@post), status: :unprocessable_entity }
       end
